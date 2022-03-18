@@ -63,3 +63,16 @@ We know that we find the average of the prices according to the colors in the co
 `df.groupby(['color', 'type'])['price', 'revenue'].mean()`: You can also aggregate by multiple columns. 
 
 `df.groupby('color')['price'].agg([min, max, sum])`: We can use the agg method to get multiple statistics. 
+
+### Pivot tables
+
+Second method for groupby is to use pivot tables. 
+
+`df.pivot_table(values='price', index='color')` and `df.groupby('color')['price'].mean()` is gives us the same result. 
+
+In pivot tables we did not specify the statistics because default one is `mean`. But if we want to display another statistics we can do it like `df.pivot_table(values='price', index='color', aggfunc=np.median)` this. If we want multiple summary statistics we can pass a list of functions to the aggfunc argument. 
+
+`df.pivot_table(values='price', index='color', columns='type'`: In group by we could also group by multiple columns. In pivot tables we can also achieve same result like this. The difference that pivot table would also include NaN values. Instead of NaN's with `fill_value=0` we can replace this values with 0's. With `margins=True` last column would include mean values for each row (not including NaN values). 
+
+
+
