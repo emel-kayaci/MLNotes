@@ -38,7 +38,9 @@
 
 `df[(df['col1'] > 10) & (df['col2'] == 'example')]`: Subsetting rows based on multiple conditions.
 
-`df[df['col_name'].isin(['Blue', 'Red'])]`: Subsetting using isin()
+`df[df['col_name'].isin(['Blue', 'Red'])]`: Subsetting using isin(), getting rows which contain Blue and Red values in column col_name.
+
+`df.loc[['Blue', 'Red']]`: Same output as above but shorter and common way.
 
 ## Cumulative Statistics
 
