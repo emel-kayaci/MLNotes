@@ -6,7 +6,6 @@
 
 `df.drop_duplicates(subset='col1')`: Drops non-unique rows from the column col1. subset also could be list of columns like `subset=['col1', 'col2']`
 
-`df['col1'].value_counts(sort=True)`: Counts number of same values then sorts them in descending order. (with `normalize=True` proportions can be achieved) 
 
 ## DataFrameAttributes
 
@@ -44,3 +43,23 @@ def iqr(column):
 
 print(df[["col1", "col2", "col3"]].agg([iqr, np.median]))
 ```
+## Summary Statistics
+
+`df['col1'].value_counts(sort=True)`: Counts number of same values then sorts them in descending order. (with `normalize=True` proportions can be achieved) 
+
+### Summaries by group
+
+```
+df[df['color'] == 'Black']['price'].mean()
+df[df['color'] == 'Red']['price'].mean()
+...
+```
+We know that we find the average of the prices according to the colors in the code snippet given above, but when we have too much color data, using such a structure causes code duplication.
+
+`df.groupby('color')['price'].mean()`: With the group by method, we can reduce this to a single line. 
+
+`df.groupby(['color', 'type'])['price'].mean()`: By giving list instead of just one column in group by we can also group by multiple columns. 
+
+`df.groupby(['color', 'type'])['price', 'revenue'].mean()`: You can also aggregate by multiple columns. 
+
+`df.groupby('color')['price'].agg([min, max, sum])`: We can use the agg method to get multiple statistics. 
