@@ -6,6 +6,11 @@
 
 `df.drop_duplicates(subset='col1')`: Drops non-unique rows from the column col1. subset also could be list of columns like `subset=['col1', 'col2']`
 
+`df.set_index('col1')`: Changes the index from default 0, 1, 2, .. to col1 values. To undo the change use `df.reset_index()`, if you want to reset and get rid of col1 then you can `df.reset_index(drop=True)`
+
+`df.set_index(['col1', 'col2'])`: Multi-level (hierarchical) indexes.
+
+`df.loc[('col1_value1', 'col2_value1'), ('col1_value2', 'col2_value2')]`: Subset inner levels with a list of tuples. 
 
 ## General DataFrame Attributes
 
@@ -24,6 +29,8 @@
 `df.sort_values(['col1', 'col2'])`: Sorting by muliple variables. First sorting by col1 then by col2. 
 
 `df.sort_values(['col1', 'col2'], ascending=[True, True])`: Changing direction of sorting. 
+
+`df.sort_index()`: Sorts by index.
 
 `df[['col1', 'col2']]`: Getting only col1 and col2 values. 
 
