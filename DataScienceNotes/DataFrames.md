@@ -44,6 +44,8 @@
 
 ### Slicing and subsetting with loc and iloc
 
+**Important**: You can only slice an index if the index is sorted. 
+
 `df.loc['starting_val':'ending_val']`: Gets rows from starting_val to ending_val including both values. (if these values are in index column)
 
 `df.loc[:, 'starting_col':'ending_col']`: Gets all rows but columns that are starting with starting_col, ending with ending_col. 
