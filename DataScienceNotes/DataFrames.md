@@ -35,8 +35,6 @@
 With agg method we can see cumulative statistics for one or more columns. In code block below iqr method is defined and passed to agg method. 
 
 ```
-# Import NumPy and create custom IQR function
-import numpy as np
 def iqr(column):
     return column.quantile(0.75) - column.quantile(0.25)
 
