@@ -6,7 +6,7 @@
 
 `df.drop_duplicates(subset='col1')`: Drops non-unique rows from the column col1. subset also could be list of columns like `subset=['col1', 'col2']`
 
-`df['col1'].value_counts(sort=True)`: Counts number of same values then sorts them in descending order. (with normalize=True proportions can be achieved) 
+`df['col1'].value_counts(sort=True)`: Counts number of same values then sorts them in descending order. (with `normalize=True` proportions can be achieved) 
 
 ## DataFrameAttributes
 
