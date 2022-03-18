@@ -29,3 +29,16 @@
 `df[(df['col1'] > 10) & (df['col2'] == 'example')]`: Subsetting rows based on multiple conditions.
 
 `df[df['col_name'].isin(['Blue', 'Red'])]`: Subsetting using isin()
+
+## Cumulative Statistics
+
+With agg method we can see cumulative statistics for one or more columns. In code block below iqr method is defined and passed to agg method. 
+
+```
+# Import NumPy and create custom IQR function
+import numpy as np
+def iqr(column):
+    return column.quantile(0.75) - column.quantile(0.25)
+
+print(df[["col1", "col2", "col3"]].agg([iqr, np.median]))
+```
