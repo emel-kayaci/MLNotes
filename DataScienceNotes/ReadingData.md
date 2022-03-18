@@ -19,7 +19,7 @@ result = [num for num in range(10**100000000)]
 ```
 The list below would first create the list then if we want to go over it we need additional for loops. but the number of elements in the list is so large that our computer or server cannot even create such a large list.
 
-The generator version is below.
+The generator version is below. To iterate over generators we can use for loops as well. 
 
 ```
 result = (num for num in range(3))
