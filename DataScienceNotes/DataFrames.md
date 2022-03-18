@@ -8,7 +8,7 @@
 
 `df.set_index('col1')`: Changes the index from default 0, 1, 2, .. to col1 values. To undo the change use `df.reset_index()`, if you want to reset and get rid of col1 then you can `df.reset_index(drop=True)`
 
-`df.set_index(['col1', 'col2'])`: Multi-level (hierarchical) indexes.
+`df.set_index(['col1', 'col2'])`: Multi-level (hierarchical) indexes. They are useful when we have hierarchical columns like country, city, etc.
 
 `df.loc[('col1_value1', 'col2_value1'), ('col1_value2', 'col2_value2')]`: Subset inner levels with a list of tuples. 
 
