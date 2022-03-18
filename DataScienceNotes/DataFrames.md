@@ -1,4 +1,4 @@
-## DataFrameMethods
+## General DataFrame Methods
 
 `df.info()`: Displays the names of columns, the data types they contain and whether they have any missing values.
 
@@ -7,7 +7,7 @@
 `df.drop_duplicates(subset='col1')`: Drops non-unique rows from the column col1. subset also could be list of columns like `subset=['col1', 'col2']`
 
 
-## DataFrameAttributes
+## General DataFrame Attributes
 
 `df.shape`: Returns a tuple that contains number of rows and columns. 
 
@@ -17,7 +17,7 @@
 
 `df.index`: Row numbers or row names. 
 
-## Sorting and subsetting
+## Sorting and Subsetting
 
 `df.sort_values('col_name')`: Change the order of the rows by sorting them according to column values. 
 
