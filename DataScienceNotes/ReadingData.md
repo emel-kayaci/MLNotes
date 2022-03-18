@@ -30,4 +30,6 @@ print(next(result)) #1
 ```
 ### Generator functions
 
-These are the functions that produce generator objects. Instead of using return to returning values these functions uses keyword yield. 
+These are the functions that produce generator objects. Instead of using return to returning values these functions uses keyword yield.  
+
+The difference between yield and return is that yield returns a value and pauses the execution while maintaining the internal states, whereas the return statement returns a value and terminates the execution of the function.
