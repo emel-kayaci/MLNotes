@@ -42,6 +42,14 @@
 
 `df.loc[['Blue', 'Red']]`: Same output as above but shorter and common way.
 
+### Slicing and subsetting with loc and iloc
+
+`df.loc['starting_val':'ending_val']`: Gets rows from starting_val to ending_val including both values. (if these values are in index column)
+
+`df.loc[:, 'starting_col':'ending_col']`: Gets all rows and columns starting with starting_col, ending with ending_col. 
+
+`df.iloc[1:2, 3:6]`: Slicing with row and column numbers. Last indexes (2 and 6) are not included.
+
 ## Cumulative Statistics
 
 With agg method we can see cumulative statistics for one or more columns. In code block below iqr method is defined and passed to agg method. 
