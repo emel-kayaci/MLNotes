@@ -10,7 +10,9 @@
 
 `df.set_index(['col1', 'col2'])`: Multi-level (hierarchical) indexes. They are useful when we have hierarchical columns like country, city, etc.
 
-`df.loc[('col1_value1', 'col2_value1'), ('col1_value2', 'col2_value2')]`: Subset inner levels with a list of tuples. 
+`df.loc[('col1_value1', 'col2_value1'):('col1_value2', 'col2_value2')]`: Subset inner levels with a list of tuples. 
+
+`df.loc[('col1_value1', 'col2_value1'):('col1_value2', 'col2_value2'), col3:col4]`: Subset inner level rows and columns col3 to col4. 
 
 `dataframe["column"].dt.component`: Accessing the components of a date (year, month and day). For month `dataframe["column"].dt.month`.
 
