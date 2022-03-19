@@ -48,7 +48,9 @@
 
 ### Slicing and subsetting with loc and iloc
 
-**Important**: You can only slice an index if the index is sorted. 
+- You can only slice an index if the index is sorted. 
+
+- In loc both values are included, in iloc first index value is included but the last is not included like in range.
 
 `df.loc['starting_val':'ending_val']`: Gets rows from starting_val to ending_val including both values. (if these values are in index column)
 
