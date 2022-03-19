@@ -12,6 +12,8 @@
 
 `df.loc[('col1_value1', 'col2_value1'), ('col1_value2', 'col2_value2')]`: Subset inner levels with a list of tuples. 
 
+`dataframe["column"].dt.component`: Accessing the components of a date (year, month and day). For month `dataframe["column"].dt.month`.
+
 ## General DataFrame Attributes
 
 `df.shape`: Returns a tuple that contains number of rows and columns. 
