@@ -16,6 +16,18 @@
 
 `dataframe["column"].dt.component`: Accessing the components of a date (year, month and day). For month `dataframe["column"].dt.month`.
 
+### Missing values
+
+`df.isna()`: Returns dataframe consisting of True/False based on missing values. (for each value)
+
+`df.isna().any()`: For each column returns whether column has missing values or not. 
+
+`df.isna().sum()`: Returns number of missing values in each column. 
+
+`df.dropna()`: Removes rows with missing values.  
+
+`df.fillna(another_value)`: Replaces missing values with another value.
+
 ## General DataFrame Attributes
 
 `df.shape`: Returns a tuple that contains number of rows and columns. 
