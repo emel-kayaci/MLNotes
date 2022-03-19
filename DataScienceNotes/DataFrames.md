@@ -93,5 +93,7 @@ In pivot tables we did not specify the statistics because default one is `mean`.
 
 `df.pivot_table(values='price', index='color', columns='type'`: In group by we could also group by multiple columns. In pivot tables we can also achieve same result like this. The difference that pivot table would also include NaN values. Instead of NaN's with `fill_value=0` we can replace this values with 0's. With `margins=True` last column would include mean values for each row (not including NaN values). 
 
+`df.mean(axis='index')` or `df.mean()`: Calculates mean for each column. 
+`df.mean(axis='columns')`: Calculates mean for each row. 
 
 
