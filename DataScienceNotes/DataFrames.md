@@ -22,7 +22,7 @@
 
 `df.isna().any()`: For each column returns whether column has missing values or not. 
 
-`df.isna().sum()`: Returns number of missing values in each column. 
+`df.isna().sum()`: Returns number of missing values in each column. To show it in bar plot use `df.isna().sum().plot(kind='bar')`
 
 `df.dropna()`: Removes rows with missing values.  
 
