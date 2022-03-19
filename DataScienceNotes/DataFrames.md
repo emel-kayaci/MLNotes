@@ -38,6 +38,28 @@
 
 `df.index`: Row numbers or row names. 
 
+## Creating DataFrames
+
+There are 2 methods to building dataframes. 
+
+1. From a list of dictionaries
+   
+   - Constructed row by row
+   
+    ```
+    list_of_dicts = [{"col1":"val1", "col2":"val2"},
+                     {"col1":"val3", "col2":"val4"}]
+    ```
+
+2. From a dictionary of lists
+
+   - Constructed column by column
+
+    ```
+    dict_of_lists = {"col1": ["val1", "val3"],
+                     "col2": ["val2", "val4"]}
+    ```
+
 ## Sorting and Subsetting
 
 `df.sort_values('col_name')`: Change the order of the rows by sorting them according to column values. 
