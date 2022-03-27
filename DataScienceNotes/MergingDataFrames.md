@@ -7,3 +7,10 @@ Only return rows that have matching value in both tables.
 `df1.merge(df2, on='col1', suffixes=('_a', '_b')`: If column names are same in both dataframes by default columns in
 dataframe are renamed like col_x, col_y. If we want to edit the names ourselves, we can set it with the suffix parameter. 
 (Column names will be col_a, col_b) 
+
+To merge multiple tables use code below. `\` ensures the continuation of the code on the next line.
+
+```
+merged_table = table1.merge(table2, on='col1') \
+               .merge(table3, on='col2')
+```
