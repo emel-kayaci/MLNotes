@@ -14,3 +14,7 @@ To merge multiple tables use code below. `\` ensures the continuation of the cod
 merged_table = table1.merge(table2, on='col1') \
                .merge(table3, on='col2')
 ```
+
+## Left join
+
+`df1.merge(df2, on='col1', how='left')`: Similar syntax to inner join, difference is how parameter. All rows from df1 appear in the result, only matching ones appear from df2, if match not found returns NaN. 
