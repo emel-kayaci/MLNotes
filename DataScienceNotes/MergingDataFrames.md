@@ -18,3 +18,14 @@ merged_table = table1.merge(table2, on='col1') \
 ## Left join
 
 `df1.merge(df2, on='col1', how='left')`: Similar syntax to inner join, difference is how parameter. All rows from df1 appear in the result, only matching ones appear from df2, if match not found returns NaN. 
+
+## Right join
+
+`df1.merge(df2, on='col1', how='right')`: All rows from df2 appear appear in the result, only matching ones appear from df1.
+
+`df1.merge(df2, left_on='df1_col1', right_on='df2_col2', how='right')`: Sometimes **on** column may have different name across tables. 
+
+## Outer join
+
+`df1.merge(df2, on='col1', how='outer')`
+
