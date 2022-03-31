@@ -31,5 +31,14 @@ Outer join is helpful to see which records are not in both tables.
 
 `df1.merge(df2, on='col1', how='outer')`
 
+## Self join
+
+Common situations:
+
+- Hierarchical relationships
+- Sequential relationships
+- Graph data
+
+
 
 
