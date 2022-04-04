@@ -70,7 +70,11 @@ Returns the left table, excluding the intersection.
 
 `.append()`: Simplified version of the concat method. Supports ignore_index and sort. Does not support keys and join. (join always outer)
 
+## Verifying integrity
 
+`.merge(validate=None)`: Validates relationship after merge is done. Checks if merge is of specified type.
 
-
-
+- one to one
+- one to many
+- many to one
+- many to many
