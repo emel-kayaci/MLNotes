@@ -64,7 +64,7 @@ Returns the left table, excluding the intersection.
 
 `.concat()` method can concatenate both vertical and horizontal. `axis=0` is vertical (by default) and `axis=1` is horizontal. 
 
-`pd.concat([january, february, march], ignore_index=False, keys=['jan', 'feb', 'mar'])`: Ignore index should set to False if you want to add keys. Key values help to distinguish between tables before concatination. 
+`pd.concat([january, february, march], ignore_index=False, keys=['jan', 'feb', 'mar'])`: Ignore index should set to False if you want to add keys. Key values help to distinguish between tables before concatination. `ignore_index`: Concat will not use the index from the original tables, but reset it instead for the larger table where the index goes from 0 to n-1.
 
 `pd.concat([table1, table2], join='inner')`: Concats two tables but includes only columns which appear in both. 
 
