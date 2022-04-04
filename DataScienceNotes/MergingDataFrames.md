@@ -60,6 +60,16 @@ There is not a direct implementation of semi join in python. Steps are given bel
 
 Returns the left table, excluding the intersection.
 
+## Concatenation
+
+`.concat()` method can concatenate both vertical and horizontal. `axis=0` is vertical (by default) and `axis=1` is horizontal. 
+
+`pd.concat([january, february, march], ignore_index=False, keys=['jan', 'feb', 'mar'])`: Ignore index should set to False if you want to add keys. Key values help to distinguish between tables before concatination. 
+
+`pd.concat([table1, table2], join='inner')`: Concats two tables but includes only columns which appear in both. 
+
+`.append()`: Simplified version of the concat method. Supports ignore_index and sort. Does not support keys and join. (join always outer)
+
 
 
 
