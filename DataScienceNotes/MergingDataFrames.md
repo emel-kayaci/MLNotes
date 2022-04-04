@@ -36,8 +36,8 @@ Outer join is helpful to see which records are not in both tables.
 Common situations:
 
 - Hierarchical relationships
-- Sequential relationships
-- Graph data
+- Sequential relationships: For example if table contains movies and their sequel movie id's by merging this table to itself we can show this relationship in one line.
+- Graph data: For example finding customers that are from the same city. 
 
 
 
