@@ -164,6 +164,25 @@ For example if we have columns from col1 to col 6 and our method is `df.melt(id_
 With `var_name='col_name'` and `value_name='col2_name'` we can change column names which are by default variable and value. 
 
 
+## Apply method 
+
+Useful when we need to apply method to every row in dataframe. In code below we are cleaning some columns which are containing special characters. 
+
+```
+# List of characters to remove
+chars_to_remove = ["+", ",", "$"]
+# List of column names to clean
+cols_to_clean = ["Installs", "Price"]
+
+# Loop for each column in cols_to_clean
+for col in cols_to_clean:
+    # Loop for each char in chars_to_remove
+    for char in chars_to_remove:
+        # Replace the character with an empty string
+        apps[col] = apps[col].apply(lambda x: x.replace(char, ''))      
+```
+
+
 
 
 
