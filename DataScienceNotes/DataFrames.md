@@ -164,7 +164,9 @@ For example if we have columns from col1 to col 6 and our method is `df.melt(id_
 With `var_name='col_name'` and `value_name='col2_name'` we can change column names which are by default variable and value. 
 
 
-## Apply method 
+## Useful methods 
+
+### 1. Apply
 
 Useful when we need to apply method to every row in dataframe. In code below we are cleaning some columns which are containing special characters. 
 
@@ -182,7 +184,14 @@ for col in cols_to_clean:
         apps[col] = apps[col].apply(lambda x: x.replace(char, ''))      
 ```
 
+### 2. Unique
 
+Useful when we need to reach unique data (or number of unique elements) in columns. 
 
+`df['Category'].unique()`: Returns unique values in Category column. `len(apps['Category'].unique())`
+
+### 3. Value counts
+
+`df['Category'].value_counts()`: Finds how many times each value in this column is presented. 
 
 
