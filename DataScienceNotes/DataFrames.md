@@ -161,7 +161,7 @@ Melt method will allow us to unpivot our dataset. Changing format from wide to l
 
 For example if we have columns from col1 to col 6 and our method is `df.melt(id_vars=['col1', 'col2'], value_vars = ['col3', 'col4'])` then col5 and col6 would not be in our final representation. 
 
-With `var_name=['col_name']` and `value_name='col2_name'` we can change column names which are by default variable and value. 
+With `var_name='col_name'` and `value_name='col2_name'` we can change column names which are by default variable and value. 
 
 
 
