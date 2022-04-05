@@ -78,3 +78,17 @@ Returns the left table, excluding the intersection.
 - one to many
 - many to one
 - many to many
+
+## Ordered merge
+
+`pd.merge_ordered(df1, df2, on='col')`: Useful for timeseries data because merges dataframes then sorts values based on col. `fill_method='ffill'`: fills missing values same as previous value
+
+`merge_asof()`: Similar to `merge_ordered()` left join but matches on the nearest key column and not exact matches. Merged "on" columns must be sorted. 
+
+**Example real life use case** 
+
+We have three financial data, but there is a day difference between these data. For example, there is 5 days between data A in blue and data B in orange.
+
+In order to observe the relationship between the data directly, if we use asof() while performing the merge operation, we can obtain the following graph.
+
+<img src="https://imgur.com/E3EgLW1.png" alt="centered image" width="320"/>
