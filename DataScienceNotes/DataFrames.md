@@ -94,6 +94,12 @@ Then call `pd.DataFrame(list_of_dicts)` or `pd.DataFrame(dict_of_lists)`
 
 `df.iloc[1:2, 3:6]`: Slicing with row and column numbers. Last indexes (2 and 6) are not included.
 
+### Selecting data with .query()
+
+`df.query('col1 >= 10')`: Querying on a single condition. Like SQL but only part after WHERE. 
+
+`df.query('col1 >= 10 and col2 < 5')`: Querying on a multiple conditions. 
+
 ## Cumulative Statistics
 
 With agg method we can see cumulative statistics for one or more columns. In code block below iqr method is defined and passed to agg method. 
