@@ -100,7 +100,7 @@ Then call `pd.DataFrame(list_of_dicts)` or `pd.DataFrame(dict_of_lists)`
 
 `df.query('col1 >= 10 and col2 < 5')`: Querying on a multiple conditions. 
 
-## Cumulative Statistics
+## Agg method
 
 With agg method we can see cumulative statistics for one or more columns. In code block below iqr method is defined and passed to agg method. 
 
@@ -110,6 +110,13 @@ def iqr(column):
 
 print(df[["col1", "col2", "col3"]].agg([iqr, np.median]))
 ```
+
+We can use agg method with group by to perform operations on grouped values. In agg method we can define different summary statistics like max, min.
+
+```
+df.groupby('col1').agg({'col2':'count'})
+```
+
 ## Summary Statistics
 
 `df['col1'].value_counts(sort=True)`: Counts number of same values then sorts them in descending order. (with `normalize=True` proportions can be achieved) 
